@@ -1,40 +1,39 @@
 # 🎯 Cod Mod War
 
-**Görüntü işleme ile ekran üzerindeki belirli noktaları tespit ederek fare konumlandırması yapan bir Python projesi. Eğitim teknik gelişim ve eğlence amacıyla geliştirilmiştir. Beta aşamasındadır**
+**A Python project that uses image processing to detect specific points on the screen and control the mouse position accordingly. Developed for educational, technical development, and entertainment purposes. Currently in beta.**
 
-## 🧠 Amaç
+## 🧠 Purpose
 
-Bu proje, Call of Duty: Modern Warfare gibi FPS oyunlarında ekranın belirli alanlarında görsel hedeflerin tespiti ve otomatik işaretleme amacıyla geliştirilmiştir. Görüntü işleme teknikleriyle, ekranın merkezine yakın bir bölgede hedef tespiti yaparak fareyi bu hedefe yönlendirmektedir.  
-**Tamamen teknik gelişim, görüntü işleme pratiği ve Python becerilerini artırmak amacıyla yazılmıştır.**
+This project is designed for FPS games like Call of Duty: Modern Warfare to detect visual targets within certain areas of the screen and automatically point the mouse cursor at them. Using image processing techniques, it scans a region near the center of the screen and moves the mouse toward the detected target.  
+**It is entirely written for technical development, practicing image processing, and improving Python skills.**
 
-## ⚙️ Özellikler
+## ⚙️ Features
 
-- Ekranın orta bölgesini tarar (optimizasyon ve hız için)
-- Grid yapısı ile ekranı 32 adet kareye ayırır
-- Belirlenen karelerde hedef araması yapar
-- Eşleşme sağlandığında imleci otomatik olarak hedefin üzerine taşır
-- Görüntü işleme ve otomasyon teknikleri içerir
+- Scans the central area of the screen (for optimization and speed)  
+- Divides the screen into a grid of 32 equal parts  
+- Searches for targets within specified grid squares  
+- Automatically moves the cursor to the matched target  
+- Utilizes image processing and automation techniques  
 
-## 📐 Ölçüm grid
+## 📐 Measurement Grid
 
-Proje, farklı ekran çözünürlüklerinde de tutarlı çalışabilmesi için ekranı 32 eş parçaya (4 satır x 8 sütun) böler. Sadece ortadaki 4 kare alanı tarar. Böylece ekran boyutundan bağımsız olarak her zaman merkeze yakın alan hızlı ve etkili şekilde analiz edilir. Bu yöntem, performans optimizasyonu ve gereksiz alanların işlenmesini engellemek için kullanılmıştır.
+To ensure consistent operation across different screen resolutions, the screen is divided into 32 equal parts (4 rows x 8 columns). Only the 4 central grid squares are scanned. This allows fast and effective analysis of the area near the center regardless of screen size. This approach is used for performance optimization and to avoid processing unnecessary areas.
 
-![Örnek Görsel](img/Ölçüler.png)
+![Example Image](img/Ölçüler.png)
 
+## 🛠️ Technologies Used
 
-## 🛠️ Kullanılan Teknolojiler
+- [OpenCV](https://opencv.org/)  
+- [NumPy](https://numpy.org/)  
+- [MSS](https://github.com/BoboTiG/python-mss)  
+- [PyAutoGUI](https://pyautogui.readthedocs.io/)  
+- [pywin32](https://github.com/mhammond/pywin32)  
+- [PyAutoIt](https://pypi.org/project/PyAutoIt/)  
+- [Playsound](https://pypi.org/project/playsound/)  
+- [Keyboard](https://pypi.org/project/keyboard/)  
+- [Pillow (PIL)](https://python-pillow.org/)  
 
-- [OpenCV](https://opencv.org/)
-- [NumPy](https://numpy.org/)
-- [MSS](https://github.com/BoboTiG/python-mss)
-- [PyAutoGUI](https://pyautogui.readthedocs.io/)
-- [pywin32](https://github.com/mhammond/pywin32)
-- [PyAutoIt](https://pypi.org/project/PyAutoIt/)
-- [Playsound](https://pypi.org/project/playsound/)
-- [Keyboard](https://pypi.org/project/keyboard/)
-- [Pillow (PIL)](https://python-pillow.org/)
-
-## 📦 Kurulum
+## 📦 Installation
 
 ```bash
 pip install opencv-python numpy mss pyautogui pywin32 -U pyautoit playsound keyboard Pillow
